@@ -96,9 +96,9 @@ function FloatingImage({ src, previewUrl, alt }) {
       {/* ── Cast shadow / engine glow on the 'floor' ── */}
       <motion.div
         animate={{
-          scaleX:  [0.78, 1.08, 0.78],
+          scaleX: [0.78, 1.08, 0.78],
           opacity: [0.28, 0.55, 0.28],
-          filter:  [
+          filter: [
             'blur(22px)',
             'blur(10px)',
             'blur(22px)',
@@ -188,6 +188,21 @@ const PROJECTS = [
     image: null,
     previewUrl: 'https://code-web-v3.vercel.app/',
     link: 'https://code-web-v3.vercel.app/',
+  },
+  {
+    name: 'EduDoc',
+    category: 'EdTech',
+    description: 'A premium digital library and educational platform featuring a vast collection of courses, intuitive course management, and a seamless learning experience.',
+    technologies: ['Android', 'Java', 'XML', 'Supabase'],
+    image: '/projects/edudoc/home.png',
+    images: [
+      '/projects/edudoc/home.png',
+      '/projects/edudoc/library.png',
+      '/projects/edudoc/profile.png',
+      '/projects/edudoc/detail.png'
+    ],
+    previewUrl: null,
+    link: '#',
   },
   {
     name: 'Dhani Control',
@@ -424,11 +439,10 @@ function PortfolioPage() {
                     <button
                       key={cat}
                       onClick={() => setActiveCategory(cat)}
-                      className={`px-4 py-2 text-[11px] font-black uppercase tracking-widest rounded border transition-all duration-250 ${
-                        activeCategory === cat
-                          ? 'bg-primary text-primary-foreground border-primary shadow-[0_0_15px_rgba(255,107,53,0.3)]'
-                          : 'bg-secondary/40 text-muted-foreground border-white/5 hover:border-primary/40 hover:text-foreground'
-                      }`}
+                      className={`px-4 py-2 text-[11px] font-black uppercase tracking-widest rounded border transition-all duration-250 ${activeCategory === cat
+                        ? 'bg-primary text-primary-foreground border-primary shadow-[0_0_15px_rgba(255,107,53,0.3)]'
+                        : 'bg-secondary/40 text-muted-foreground border-white/5 hover:border-primary/40 hover:text-foreground'
+                        }`}
                     >
                       {cat}
                     </button>
@@ -473,30 +487,30 @@ function PortfolioPage() {
             <div className="absolute inset-0 bg-primary/5 blur-[120px] -z-10 pointer-events-none" />
             <div className="container mx-auto px-4 sm:px-6 lg:px-12">
               <div style={{ perspective: '1000px' }}>
-              <motion.div
-                initial={{ opacity: 0, y: 60, rotateX: 20, scale: 0.94 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ type: 'spring', stiffness: 50, damping: 14 }}
-                style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
-                className="flex flex-col md:flex-row md:items-center justify-between gap-10 bg-card border border-white/5 rounded-xl p-10 lg:p-14 hover:border-primary/20 transition-all duration-500"
-              >
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[0.3em] text-primary mb-4">— Next Up</p>
-                  <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter text-foreground leading-none mb-4">
-                    Your project<br />could be here.
-                  </h2>
-                  <p className="text-muted-foreground font-medium max-w-md leading-relaxed">
-                    We partner with ambitious teams to engineer products that scale. Let's discuss what we can build together.
-                  </p>
-                </div>
-                <a
-                  href="/contact"
-                  className="flex-shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-black uppercase tracking-widest rounded hover:bg-primary/90 hover:gap-5 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,107,53,0.4)] text-sm"
+                <motion.div
+                  initial={{ opacity: 0, y: 60, rotateX: 20, scale: 0.94 }}
+                  whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ type: 'spring', stiffness: 50, damping: 14 }}
+                  style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
+                  className="flex flex-col md:flex-row md:items-center justify-between gap-10 bg-card border border-white/5 rounded-xl p-10 lg:p-14 hover:border-primary/20 transition-all duration-500"
                 >
-                  Start a Project <ArrowUpRight className="h-5 w-5" />
-                </a>
-              </motion.div>
+                  <div>
+                    <p className="text-xs font-black uppercase tracking-[0.3em] text-primary mb-4">— Next Up</p>
+                    <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter text-foreground leading-none mb-4">
+                      Your project<br />could be here.
+                    </h2>
+                    <p className="text-muted-foreground font-medium max-w-md leading-relaxed">
+                      We partner with ambitious teams to engineer products that scale. Let's discuss what we can build together.
+                    </p>
+                  </div>
+                  <a
+                    href="/contact"
+                    className="flex-shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-black uppercase tracking-widest rounded hover:bg-primary/90 hover:gap-5 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,107,53,0.4)] text-sm"
+                  >
+                    Start a Project <ArrowUpRight className="h-5 w-5" />
+                  </a>
+                </motion.div>
               </div>
             </div>
           </section>

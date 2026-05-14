@@ -152,4 +152,11 @@ Complete digital presence covering:
 - **Features:** Live code execution, real-time feedback, and structured coding curriculums.
 - **URL:** [gyan-code.vercel.app](https://gyan-code.vercel.app/)
 
+### 7. 📚 EduDoc
+**Digital Library & Learning Platform**
+- **Type:** Native Android Application
+- **Stack:** Android, Java, XML, Supabase
+- **Features:** Comprehensive course library, interactive reading, and personalized learning paths.
+- **URL:** [Coming Soon]
+
 ---
